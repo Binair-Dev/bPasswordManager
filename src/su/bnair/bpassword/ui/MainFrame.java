@@ -114,7 +114,7 @@ public class MainFrame extends NamedJFrame {
                     StoredInformation selectedValue = source.getSelectedValue();
                     int index = source.getSelectedIndex();
                     if (selectedValue != null) {
-                       JFrame temp = new StoredInformationPopup(selectedValue);
+                       JFrame temp = new StoredInformationPopup(selectedValue, index);
                        temp.setLocationRelativeTo(null);
                        temp.setVisible(true);
                     }

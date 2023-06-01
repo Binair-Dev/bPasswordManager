@@ -51,6 +51,10 @@ public class Instances {
 	public static void addElementToIdList(StoredInformation info) {
 		listModel.addElement(info);
 	}
+	
+	public static void deleteElementFromIdList(int index) {
+		listModel.remove(index);
+	}
 
 	public static DefaultListModel<StoredInformation> getIdList() {
 		if(listModel == null) {

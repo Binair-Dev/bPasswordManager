@@ -37,7 +37,7 @@ public class InformationStoreFrame extends NamedJFrame {
 				Instances.open(Instances.getMainFrame());
             }
         });
-		setBounds(100, 100, 450, 180);
+		setBounds(100, 100, 450, 185);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 

@@ -49,6 +49,21 @@ public class DatabaseUtils
         }
     }
 	
+	public static void deleteStoredInformation(StoredInformation stored) {
+        Connection connection = null;
+        try {
+            connection = DatabaseManager.getConnection();
+            PreparedStatement statement = connection.prepareStatement("DELETE FROM bpassword WHERE name = ? AND url = ? AND user = ? AND password = ?;");  
+            statement.setString(1, stored.getName());
+            statement.setString(2, stored.getUrl());
+            statement.setString(3, stored.getUser());
+            statement.setString(4, stored.getPassword());
+            int rs = statement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+	
 	public static void addStoredInformation(StoredInformation si) {
 		if(si != null) {
 			Connection connection = null;
